@@ -1,0 +1,16 @@
+name: Bi
+
+labels:
+  - Bisexual
+  - Biromantic
+
+summary:
+  text: |
+    Attraction to two or more genders.
+
+description:
+  text: |
+    Bi is a label for people attracted to two or more genders.
+    Often 'Bi' is used as a shortening of Bisexual,
+    but could also mean Biromantic for people using the def:sam[name=Split-Attraction Model]
+    and/or for people who are on the id:ace-spec[name=asexual spectrum].

@@ -1,0 +1,15 @@
+name: Asexual flag
+
+community contributed: yes
+
+default: yes
+
+flag:
+  source:
+    url: https://en.wikipedia.org/wiki/File:Asexual_Pride_Flag.svg
+  
+  stripes:
+    - "000000"
+    - "a3a3a3"
+    - "ffffff"
+    - "800080"

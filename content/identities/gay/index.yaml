@@ -1,0 +1,24 @@
+name: Gay
+
+summary:
+  text: |
+    Attraction to gender that is the same or similar to one's own.
+    Can be applied to men, women, and id:non-binary[] people, however sometimes used
+    when referring to only gay men.
+
+description:
+  text: |
+    Gay refers to attraction to genders that are the same or similar to one's own.
+    
+    The term can apply to men, women, and id:non-binary[] people,
+    however the term id:lesbian[] is often used for gay women.
+
+    Gay is sometimes used when referring to only gay men,
+    which is can also be called id:vincian[] as a specific identity
+    for men and men-aligned people attracted to other men and men-aligned people.
+  remix:
+    - license: CC-BY-SA-3.0
+      page:
+        type: article
+        name: Gay
+        url: https://lgbta.wikia.org/wiki/Gay

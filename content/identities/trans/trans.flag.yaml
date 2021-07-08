@@ -1,0 +1,19 @@
+name: Trans flag
+
+community contributed: yes
+
+default: yes
+
+flag:
+  source:
+    url: https://en.wikipedia.org/wiki/File:Transgender_Pride_flag.svg
+  
+  author:
+    name: Monica Helms
+  
+  stripes:
+    - 5BCEFA
+    - F5A9B8
+    - FFF
+    - F5A9B8
+    - 5BCEFA

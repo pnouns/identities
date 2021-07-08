@@ -1,0 +1,76 @@
+name: Asexual Spectrum
+
+labels:
+  - Ace Spec
+
+summary:
+  text: |
+    The asexual spectrum includes various identities describing def:sexual-attraction[name=sexual attraction],
+    including id:asexual[], id:demisexual[], id:graysexual[], and others.
+    Asexual spectrum can also be used to identify with asexual identities without specifying one of the more specific labels.
+
+description:
+  text: |
+    The asexual spectrum describes several forms of def:sexual-attraction[name=sexual attraction],
+    including having no sexual attraction (id:asexual[]),
+    sexual attraction after forming a bond (id:demisexual[]), as well as additional labels and def:microlabel[name=microlabels].
+
+    ## Desire
+
+    Attraction, desire, and activity are separate concepts - some find they are aligned on all three categories,
+    others have differing stances.
+
+    Asexuality is traditionally only linked to attraction to others, and doesn't imply anything about desire or activity.
+
+    Desire is traditionally classified as def:sex-repulsed[name=sex repulsed], def:sex-indifferent[name=sex indifferent],
+    def:sex-ambivalent[name=sex ambivalent], and def:sex-favorable[name=sex favorable], pertaining to what you personally
+    desire irrespective of attraction.
+
+    These are different from def:sex-positive[name=sex positive] and def:sex-negative[name=sex negative] -
+    which pertain to your political/moral views in general as opposed to your personal desires.
+
+    All of this is also separate from activity, e.g. def:celibacy[].
+
+    ## Asexual Identities and Labels
+
+    ### Split-Attraction Model
+
+    People on the asexual and id:aro-spec[name=aromantic] spectrums sometimes use the def:sam[name=split attraction model] (SAM)
+    to specify differences in their sexual and romantic attractions.
+    
+    "id:bi[name=Biromantic] id:asexual[]" would be an example of using the def:sam[name=SAM] to label someone who
+    has def:romantic-attraction[name=romantic attractions] but is id:asexual[] without def:sexual-attraction[name=sexual attraction].
+
+    ### Aroace
+
+    People who are both id:aromantic[] and id:asexual[] may shorten "aromantic asexual" to id:aroace[] (also styled as "aro ace").
+
+    People who are aroace may have def:tertiary-attraction[name=tertiary attraction] (id:oriented-aroace[name=oriented aroace]),
+    no tertiary attraction (id:electio-aroace[name=electio aroace]),
+    or have sexual, romantic, or tertiary attraction
+      while identifying under the asexual and id:aro-spec[name=aromantic] spectrums (id:angled-aroace[name=angled aroace]).
+
+    As with the entire asexual and id:aro-spec[name=aromantic] spectrums, the id:aroace[] label does not directly correlate to
+    sexual or romantic desire, and people who identify as aroace can be
+    def:sex-repulsed[name=sex repulsed], def:sex-favorable[name=sex favorable],
+    def:romance-repulsed[name=romance repulsed], def:romance-favorable[name=romance favorable],
+    or anywhere between any of those labels.
+
+    ### Asexual Spectrum Labels
+
+    Some identify simply as being on the asexual spectrum, while others use specific labels.
+    A non-exhaustive list of labels and def:microlabel[name=microlabels] is included below.
+
+    [horizontal]
+    id:asexual[name=Asexual]::
+      The Asexual label can refer to the entire asexual spectrum/used as an umbrella instead of sharing a specific label,
+      but also can be used to refer to those without any sexual attraction.
+    id:demisexual[name=Demisexual]::
+      The demisexual label refers to people who develop sexual attraction only after forming a personal bond.
+    id:graysexual[name=Graysexual]::
+      Also called gray sexual, grayasexual.
+      Refers to people who don't specify their sexual attraction beyond being on the asexual spectrum.
+    id:cupiosexual[name=Cupiosexual]::
+      People who like/desire a sexual relationship without experiencing sexual attraction.
+
+    This is a non-exhausive list and there are many more labels and identities inside the asexual spectrum.

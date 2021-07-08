@@ -1,0 +1,340 @@
+openapi: 3.0.2
+servers:
+  - url: https://identities.fyi/
+    description: Production
+info:
+  description: |
+    The [Identities.FYI](https://identities.fyi/) API provides [LGBTQIA+](https://identities.fyi/queer/)
+    identities and flags that can be integrated for free into your application.
+
+    The API is fully published as static assets on a CDN; no authentication or rate-limits are applied.
+    Please ensure that your use of [identities.fyi](https://identities.fyi) does not degrade the service
+    for other users via excessive requests (e.g. DDOS or other attacks).
+
+    ## Licensing
+
+    Content directly contributed to [identities.fyi](https://identities.fyi) is licensed under
+    the Creative Commons Attribution-Share Alike License 4.0.
+
+    **PLEASE NOTE**: The API includes some articles that are based significantly on other Creative Commons work.
+    API requests may include data that is licensed under different Creative Commons licenses, please ensure you properly
+    attribute and use data according to the terms of each page.
+
+    ### Remixing Our Data
+
+    If you publish content that re-uses data from our website you must follow the terms of
+    all licenses involved, including releasing your content under a Creative Commons license.
+
+    ### Attributing Data
+
+    You must provide attribution if you embed or otherwise include our content in your work; sample text is provided below.
+
+    Identity list:
+    > This list of LGBTQIA+ identities on this page is from [identities.fyi](https://identities.fyi),
+    > licensed under the [Creative Commons Attribution-Share Alike License 4.0](http://creativecommons.org/licenses/by-sa/4.0/).
+
+    Identity description:
+    > Information about Lesbian, Gay, and Bi identities is from the
+    > [Lesbian](https://identities.fyi/lesbian/),
+    > [Gay](https://identities.fyi/gay/),
+    > and [Bi](https://identities.fyi/bi/) pages by
+    > [identities.fyi](https://identities.fyi),
+    > licensed under the [Creative Commons Attribution-Share Alike License 4.0](http://creativecommons.org/licenses/by-sa/4.0/).
+
+    Flag:
+    > The [Lesbian flag](https://identities.fyi/lesbian/flags/lesbian/) image on this page is from
+    > [identities.fyi](https://identities.fyi),
+    > licensed under the [Creative Commons Attribution-Share Alike License 4.0](http://creativecommons.org/licenses/by-sa/4.0/).
+  version: 0.0.0
+  title: Identities.fyi API
+
+tags:
+  - name: identities
+    description: Information about LGBTQIA+ identities
+  - name: flags
+    description: Information about LGBTQIA+ flags, and flag images.
+  - name: identity_list_model
+    x-displayName: CompiledIdentityList
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/CompiledIdentityList" />
+  - name: identity_index_model
+    x-displayName: CompiledIdentityIndexFile
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/CompiledIdentityIndexFile" />
+
+x-tagGroups:
+  - name: API
+    tags:
+      - identities
+      - flags
+  - name: Models
+    tags:
+      - identity_list_model
+      - identity_index_model
+
+paths:
+  '/{identityList}.identities.json':
+    parameters:
+      - name: identityList
+        in: path
+        description: Filtered lists of identities to fetch.
+        required: true
+        deprecated: false
+        schema:
+          type: string
+          enum:
+            - all
+            - homepage
+          default: all
+    get:
+      summary: Fetch a list of LGBTQIA+ identities
+      description: Returns a list of LGBTQIA+ identities
+      operationId: getIdentityList
+      tags:
+        - identities
+      responses:
+        '200':
+          description: A list of identities
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CompiledIdentityList'
+      x-codeSamples:
+        - lang: Shell
+          label: curl
+          source: |
+            curl "https://identities.fyi/all.identities.fyi"
+        - lang: JavaScript
+          label: Node/Browser
+          source: |
+            import { IdentityFYIClient } from "@idfyi/client";
+
+            async function listIdentities() {
+              const client = new IdentityFYIClient();
+              const response = await client.getIdentityList("all");
+              console.log(`'${response.name}' list has ${response.identities.length} identities:`);
+              for (const identity of response.identities) {
+                console.log(identity.name);
+              }
+            }
+        - lang: JavaScript
+          label: React Hook
+          source: |
+            import { useIdentityList } from "@idfyi/react";
+
+            export const MyIdentityList: React.FC<{}> = ({}) => {
+              const { isLoading, error, data: identityList } = useIdentityList("all");
+              if (isLoading) {
+                return <span>Loading</span>;
+              } if (error) {
+                console.error(error);
+                return <span>Error</span>;
+              }
+              return (
+                <>
+                  <div>{identityList.name} Identities</div>
+                  { identityList.identities.map(identity => (
+                    <div>
+                      {identity.name}
+                    </div>
+                  ))}
+                </>
+              );
+            };
+  '/{identity}/index.json':
+    parameters:
+      - name: identity
+        in: path
+        description: The identity ID to load
+        required: true
+        deprecated: false
+        schema:
+          type: string
+          example: agender
+    get:
+      summary: Fetch details of a specific identity
+      description: Returns the details of an LGBTQIA+ identity
+      operationId: getIdentity
+      tags:
+        - identities
+      responses:
+        '200':
+          description: The identity details
+          content:
+            application/json:
+              schema:
+                $ref:  "#/components/schemas/CompiledIdentityIndexFile"
+      x-codeSamples:
+        - lang: Shell
+          label: curl
+          source: |
+            curl "https://identities.fyi/agender/index.json"
+        - lang: JavaScript
+          label: Node/Browser
+          source: |
+            import { IdentityFYIClient } from "@idfyi/client";
+
+            async function getIdentityDescription() {
+              const client = new IdentityFYIClient();
+              const identity = await client.getIdentity("agender");
+              console.log(identity.description.plaintext);
+            }
+        - lang: JavaScript
+          label: React Hook
+          source: |
+            import { useIdentity, renderTextBlock } from "@idfyi/react";
+            import { Link } from "react-router-dom";
+
+            export const MyIdentityList: React.FC<{}> = ({}) => {
+              const { isLoading, error, data: identity } = useIdentity("agender");
+              const desc = renderTextBlock(
+                identity ? identity.description : { html: "", plaintext: "" },
+                {
+                  identityLink: (id, name) => <Link to={`/${id}/`}>{name}</Link>,
+                });
+              if (isLoading) {
+                return <span>Loading</span>;
+              } if (error) {
+                console.error(error);
+                return <span>Error</span>;
+              }
+              return (
+                <>
+                  <div>{identity.name}</div>
+                  { identityList.identities.map(identity => (
+                    <div>
+                      {identity.name}
+                    </div>
+                    { desc }
+                  ))}
+                </>
+              );
+            };
+
+components:
+  schemas:
+    CompiledIdentityList:
+      description: A list of LGBTQIA+ identities.
+      type: object
+      properties:
+        name:
+          description: The name of the identity list
+          type: string
+          example: all
+        identities:
+          description: The list of identities found
+          type: array
+          items:
+            $ref: '#/components/schemas/CompiledIdentityListItem'
+      required:
+        - name
+        - identities
+    CompiledIdentityListItem:
+      description: A summary of an LGBTQIA+ identity.
+      type: object
+      properties:
+        id:
+          description: The ID of the identity
+          type: string
+          example: lesbian
+        name:
+          description: A human-readable name of the identity
+          type: string
+          example: Lesbian
+        summary:
+          description: A short description of the identity (a few sentences max), if set.
+          $ref:  "#/components/schemas/CompiledTextBlock"
+          x-nullable: true
+        defaultFlag:
+          description: The primary flag to display for this identity, if set.
+          $ref:  "#/components/schemas/CompiledBriefFlag"
+          x-nullable: true
+      required:
+        - id
+        - name
+    CompiledIdentityIndexFile:
+      description: Details about a specific LGBTQIA+ identity
+      type: object
+      properties:
+        id:
+          description: A unique ID for this identity
+          type: string
+          example: agender
+        name:
+          description: The displayable name for this identity
+          type: string
+          example: Agender
+        description:
+          description: A description of this identity.  Can be a full page long.
+          $ref:  "#/components/schemas/CompiledTextBlock"
+        defaultFlag:
+          description: The primary flag to display for this identity, if set.
+          $ref:  "#/components/schemas/CompiledBriefFlag"
+          x-nullable: true
+      required:
+        - id
+        - name
+        - description
+    CompiledTextBlock:
+      description: A longer section of text that may include complex formatting.
+      type: object
+      properties:
+        html:
+          description: HTML code to render this item.
+          type: string
+          example: |
+            <div class="paragraph">
+            <p>Asexual is a label for people who do not feel <a href="https://identities.fyi/glossary/sexual-attraction/" data-glossary="sexual-attraction">sexual attraction</a>.</p>
+            </div>
+            <div class="paragraph">
+            <p>Asexual can also be used as a general term to refer to people anywhere in the <a href="https://identities.fyi/glossary/ace-spec/" data-glossary="ace-spec">asexual spectrum</a>.</p>
+            </div>
+        plaintext:
+          description: The text with all formatting stripped out.
+          type: string
+          example: |
+            Asexual is a label for people who do not feel sexual attraction.
+            
+            Asexual can also be used as a general term to refer to people anywhere in the
+            asexual spectrum.
+        # TODO: remix
+      required:
+        - html
+        - plaintext
+    CompiledBriefFlag:
+      description: A short description of a flag.
+      type: object
+      properties:
+        id:
+          description: The ID of the flag.
+          type: string
+          example: ace-spec
+        name:
+          description: A displayable name of the flag.
+          type: string
+          example: Asexual Spectrum Flag
+        alias:
+          description: If the flag is an alias of another flag, the route to the other flag.
+          type: string
+          example: asexual/ace
+          x-nullable: true
+        square:
+          description: A square (1x1) form of this flag
+          $ref:  "#/components/schemas/CompiledImageLinks"
+          x-nullable: true
+        rect:
+          description: A rectangular (3x5) form of this flag
+          $ref:  "#/components/schemas/CompiledImageLinks"
+          x-nullable: true
+      required:
+        - id
+        - name
+    CompiledImageLinks:
+      description: Links to display this flag.
+      type: object
+      properties:
+        svg:
+          description: An SVG copy of the flag.
+          type: string
+          example: /ace-spec/flags/ace-spec/ace-spec.square.svg
+          x-nullable: true

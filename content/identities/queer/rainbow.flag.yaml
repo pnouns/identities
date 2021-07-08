@@ -1,0 +1,21 @@
+name: Rainbow Flag
+
+community contributed: yes
+
+default: yes
+
+flag:
+  source:
+    url: https://commons.wikimedia.org/w/index.php?curid=479191
+
+  based on: queer/original
+
+  stripes:
+    - "e40303"
+    - "ff8c00"
+    - "ffed00"
+    - "008026"
+    - "004dff"
+    - "750787"
+
+  license: public domain

@@ -1,0 +1,21 @@
+/.yarn/*
+!/.yarn/releases
+!/.yarn/plugins
+!/.yarn/sdks
+
+# Swap the comments on the following lines if you don't wish to use zero-installs
+# Documentation here: https://yarnpkg.com/features/zero-installs
+!/.yarn/cache
+#/.pnp.*
+
+Jakefile.js
+compile-ts.js
+prebuild.js
+packages/builder/out/
+packages/dto/out/
+packages/api-client/out/
+packages/react-client/out/
+dist/
+
+**/.tmp/
+**/node_modules/

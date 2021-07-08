@@ -1,0 +1,12 @@
+name: Asexual spectrum flag
+
+community contributed: yes
+
+default: yes
+
+flag:
+  stripes:
+    - "141846"
+    - "7557af"
+    - "d992b3"
+    - "ffecee"

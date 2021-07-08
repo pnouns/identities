@@ -1,0 +1,14 @@
+name: Aromantic
+
+labels:
+  - Aro
+
+summary:
+  text: |
+    A lack of def:romantic-attraction[name=romantic attraction].
+
+description:
+  text: |
+    Aromantic is a label for people who do not feel def:romantic-attraction[name=romantic attraction].
+
+    Aromantic can also be used as a general term to refer to people anywhere in the def:aro-spec[name=aromantic spectrum].

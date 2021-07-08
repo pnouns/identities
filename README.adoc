@@ -1,1 +1,30 @@
 = Identities, FYI
+
+== Development
+
+=== Running Locally
+
+. Clone the repository
+. `yarn`
+
+My optimal workflow uses 3 terminals.
+
+One window is split between:
+
+- `yarn workspace @idfyi/website dev` +
+  which runs webpack in a watch mode
+- An empty terminal that I can run yarn and git commands, and `yarn build` to compile as needed
+
+The second window (which is usually hidden)
+runs `yarn serve` to serve the files in `dist/`.
+
+=== Debugging
+
+[source,sh]
+----
+# Debug all scripts
+DEBUG=compiler:* DEBUG_LEVEL=trace yarn build
+
+# Specify specific libraries
+DEBUG=compiler:builder:*,compiler:compile-ts,compiler:jakefile yarn build
+----

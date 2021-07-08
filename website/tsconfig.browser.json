@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "out/",
+    "lib": [ "es2016", "dom", "esnext" ],
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+  },
+  "include": [
+    "src/",
+    "test/",
+  ],
+}

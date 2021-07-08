@@ -1,0 +1,14 @@
+{
+  "name": "@idfyi/client",
+  "version": "0.0.0",
+  "description": "A Node/browser client for identities.fyi",
+  "main": "out/src/index.js",
+  "dependencies": {
+    "@idfyi/dto": "workspace:packages/dto",
+    "class-transformer": "^0.4.0",
+    "class-transformer-validator": "^0.9.1",
+    "class-validator": "^0.13.1",
+    "cross-fetch": "^3.1.4",
+    "reflect-metadata": "^0.1.13"
+  }
+}

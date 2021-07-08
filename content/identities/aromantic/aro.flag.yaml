@@ -1,0 +1,16 @@
+name: Aromantic flag
+
+community contributed: yes
+
+default: yes
+
+flag:
+  source:
+    url: https://commons.wikimedia.org/wiki/File:Aromantic_Pride_Flag.svg
+  
+  stripes:
+    - "3da542"
+    - "a7d379"
+    - "ffffff"
+    - "a9a9a9"
+    - "000000"

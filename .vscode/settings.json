@@ -1,0 +1,43 @@
+{
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "cSpell.words": [
+    "ADOC",
+    "Agender",
+    "Aromantic",
+    "Aromanticism",
+    "Biromantic",
+    "Cisn't",
+    "GLAAD",
+    "LGBTQ",
+    "LGBTQIA",
+    "NOTO",
+    "Styleguide",
+    "allo",
+    "alloromantic",
+    "allosexual",
+    "aroace",
+    "asciidoctor",
+    "cupioromantic",
+    "cupiosexual",
+    "demiromantic",
+    "demisexual",
+    "electio",
+    "exhausive",
+    "grayaromantic",
+    "grayasexual",
+    "grayromantic",
+    "graysexual",
+    "idfyi",
+    "jakefile",
+    "microlabel",
+    "microlabels",
+    "prebuild",
+    "referrerpolicy",
+    "vincian"
+  ]
+}

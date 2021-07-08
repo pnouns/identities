@@ -1,0 +1,15 @@
+name: Agender flag
+
+community contributed: yes
+
+default: yes
+
+flag:
+  stripes:
+    - "000000"
+    - "bcc5c6"
+    - "ffffff"
+    - "b5f582"
+    - "ffffff"
+    - "bcc5c6"
+    - "000000"

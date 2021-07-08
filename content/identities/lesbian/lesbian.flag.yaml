@@ -1,0 +1,26 @@
+name: Lesbian
+
+community contributed: no
+
+default: yes
+
+flag:
+  source:
+    url: https://sadlesbeandisaster.tumblr.com/post/174618152601/
+    archive: https://archive.is/jRCby
+
+  author:
+    name: Emily
+    username:
+      name: sadlesbeandisaster
+      platform: tumblr
+    url: https://sadlesbeandisaster.tumblr.com/
+
+  stripes:
+    - d52d00ff
+    - ef7627ff
+    - ff9a56ff
+    - ffffffff
+    - d162a4ff
+    - b55690ff
+    - a30262ff

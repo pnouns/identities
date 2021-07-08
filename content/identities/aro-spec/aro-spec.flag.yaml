@@ -1,0 +1,13 @@
+name: Aromantic spectrum flag
+
+community contributed: yes
+
+default: yes
+
+flag:
+  stripes:
+    - "3e9f51"
+    - "98ce7c"
+    - "f3fcd0"
+    - "176264"
+    - "052128"

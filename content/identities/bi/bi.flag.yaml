@@ -1,0 +1,20 @@
+name: Bi flag
+
+community contributed: yes
+
+default: yes
+
+flag:
+  source:
+    url: https://en.wikipedia.org/wiki/File:Bisexual_Pride_Flag.svg
+  
+  author:
+    name: Michael Page
+  
+  uneven stripes:
+    - color: d60270
+      height: 0.4
+    - color: 9b4f96
+      height: 0.2
+    - color: 0038a8
+      height: 0.4

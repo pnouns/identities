@@ -1,0 +1,27 @@
+name: Philadelphia Pride Flag
+
+community contributed: true
+
+flag:
+  source:
+    url: https://en.wikipedia.org/wiki/File:Philadelphia_Pride_Flag.svg
+
+  based on: queer/rainbow
+
+  author:
+    name: Philadelphia City Council and Tierney
+
+  info:
+    - url: https://www.phillymag.com/news/2017/06/08/philly-pride-flag-black-brown/
+
+  stripes:
+    - "000"
+    - "784F17"
+    - "E40303"
+    - "FF8C00"
+    - "FFED00"
+    - "008026"
+    - "004DFF"
+    - "750787"
+
+  license: public domain

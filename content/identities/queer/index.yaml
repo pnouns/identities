@@ -1,0 +1,66 @@
+name: Queer
+
+labels:
+  - LGBT
+  - LGBT+
+  - LGBTQ
+  - LGBTQ+
+  - LGBTQIA+
+  - LGBTQIA
+
+summary:
+  text: |
+    Can be used to refer to the entire LGBTQIA+ community,
+    or used as a label to broadly identify as an LGBTQIA+ community member without specifics.
+
+    _Reclaimed slur_
+
+description:
+  text: |
+    == The LGBTQIA+ Community
+
+    There are many names and acronyms for the community of people who are
+    non-def:allo[], non-def:cis[], and/or non-def:hetero[].
+
+    .Use of queer and LGBTQIA+ on this resource
+    [%collapsible]
+    ====
+    For brevity and consistency, this resource uses the following language, as defined by the Identities.FYI Styleguide.
+
+    [horizontal]
+    Queer:: As the title of this page and in reference to this page
+    LGBTQIA+ community:: To refer to the entire community
+    LGBTQIA+ identities:: when referring to the specific list of non-def:allo[], non-def:cis[], and/or non-def:hetero[] identities.
+
+    The usage of the two terms is intended to include more of the community than just the listed identities in 'LGBTQIA+',
+    mixed with a medium-length acronym that is not a reclaimed slur.
+
+    The primary editor of this website uses multiple labels to define their gender and sexuality, including ones included in 'LGBTQIA+' and ones not,
+    as well as identifying with the word queer.
+    ====
+
+    === Acronyms
+
+    Acronyms of identities are commonly used to refer to the community, such as LGBT+, LGBTQ+, LGBTQIA+,
+    with the plus standing for all the other identities that aren't listed.
+
+    ==== LGBTQIA+ and similar Acronyms
+
+    [horizontal]
+    L:: id:lesbian[name=Lesbian]
+    G:: id:gay[name=Gay]
+    B:: id:bi[name=Bi-] (Bisexual, Biromantic)
+    T:: id:trans[name=Transgender]
+    Q:: id:queer[name=Queer], id:questioning[name=Questioning]
+    I:: id:intersex[name=Intersex]
+    A:: id:ace-spec[name=Asexual Spectrum], id:aro-spec[name=Aromantic Spectrum], id:agender[name=Agender]
+
+    === Queer (Community)
+
+    Queer is a reclaimed slur used to refer to the LGBTQIA+ community and it's members.
+
+    [#identity]
+    == Queer (Identity)
+
+    Queer can also be used as a label, allowing people to identify as part LGBTQIA+ community without
+    more specific labels.

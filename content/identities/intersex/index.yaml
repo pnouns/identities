@@ -1,0 +1,18 @@
+name: Intersex
+
+summary:
+  text: |
+    Intersex is a term for those born with physical sex characteristics that cannot be traditionally classified as male or female.
+    Intersex is included in the LGBT+ community, though not all intersex people consider themselves to be id:queer[] on the basis of being intersex.
+
+description:
+  text: |
+    Intersex is a term for those born with physical sex characteristics that cannot be traditionally classified as male or female.
+
+    Intersex is included in the LGBT+ community, though not all intersex people consider themselves to be id:queer[] on the basis of being intersex.
+  remix:
+    - license: CC-BY-SA-3.0
+      page:
+        type: article
+        name: Intersex
+        url: https://lgbta.wikia.org/wiki/Intersex

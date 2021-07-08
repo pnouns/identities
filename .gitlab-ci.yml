@@ -1,0 +1,17 @@
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  image: node:14
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  environment:
+    NODE_ENV: production
+  script:
+    - yarn
+    - yarn build
+    - mv dist/ public/
+  artifacts:
+    paths:
+      - public

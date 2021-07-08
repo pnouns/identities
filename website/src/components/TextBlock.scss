@@ -1,0 +1,20 @@
+.adoc-content {
+  @import "../lib/noto-sans.scss";
+  @import "../lib/asciidoctor-default.scss";
+
+  h1,h2,h3,h4,h5,h6 {
+    color: inherit;
+  }
+
+  table tr th, table tr td {
+    color: inherit;
+  }
+
+  a {
+    color: var(--chakra-colors-blue-100);
+  }
+
+  a:hover, a:focus {
+    color: var(--chakra-colors-blue-600);
+  }
+}
