@@ -294,7 +294,7 @@ jake.file("dist/index.html", [ INDEX_FILE ], async () => {
 
 jake.file("dist/404.html", [ INDEX_FILE ], async () => {
   await mkdirp("dist/");
-  await copy(INDEX_FILE, "dist/index.html");
+  await copy(INDEX_FILE, "dist/404.html");
 });
 
 const NOTO_SANS = "website/src/lib/noto-sans.scss";
