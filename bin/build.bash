@@ -15,11 +15,6 @@ function logStart() {
 
 set -e
 
-if [ "$NODE_ENV" == "production" ]; then
-  logStart "@idfyi/website"
-  yarn workspace @idfyi/website build
-fi
-
 logStart "@idfyi/dto"
 yarn tsc --build packages/dto/tsconfig.json
 
@@ -28,6 +23,11 @@ yarn tsc --build packages/api-client/tsconfig.json
 
 logStart "@idfyi/react"
 yarn tsc --build packages/react-client/tsconfig.json
+
+if [ "$NODE_ENV" == "production" ]; then
+  logStart "@idfyi/website"
+  yarn workspace @idfyi/website build
+fi
 
 logStart "prebuild scripts"
 yarn tsc --build prebuild.tsconfig.json
