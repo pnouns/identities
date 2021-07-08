@@ -2,12 +2,13 @@ import React from "react";
 import { Container, Heading, Text } from "@chakra-ui/react";
 import { Header } from "../../components/Header";
 import { IdentityListDisplay } from "../../components/IdentityListDisplay";
+import { ButtonLink } from "../../components/Link";
 
 const Homepage: React.FC<{}> = () => {
   return (
     <>
       <Header />
-      <Container maxW="container.xl">
+      <Container maxW="container.xl" pb="4">
         <Heading as="h2" size="2xl" textAlign="center" paddingTop="2" paddingBottom="1">
           Queer Identities
         </Heading>
@@ -28,6 +29,7 @@ const Homepage: React.FC<{}> = () => {
           Make sure you properly attribute and license content used.<br />
           API requuests will include required licensing and attribution information as needed.
         </Text>
+        <ButtonLink path="/docs/api/" my="2">API Documentation</ButtonLink>
       </Container>
     </>
   );

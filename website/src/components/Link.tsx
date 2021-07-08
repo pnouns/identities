@@ -6,6 +6,7 @@ export interface CommonLinkProps {
   path: string;
   newTab?: boolean;
   external?: boolean;
+  my?: number | string;
 }
 
 export interface LinkProps extends CommonLinkProps {
@@ -19,12 +20,14 @@ export const Link: React.FC<LinkProps> = ({
   external,
   color,
   noUnderline,
+  my,
   children,
 }) => {
   const props = {
     color: color,
     textDecoration: noUnderline ? undefined : "underline",
     target: newTab ? "_blank" : undefined,
+    my,
   };
   if(external) {
     return (
@@ -52,10 +55,16 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
   external,
   rightIcon,
   children,
+  my,
 }) => {
+  const props = {
+    target: newTab ? "_blank" : undefined,
+    rightIcon,
+    my,
+  }
   if(external) {
     return (
-      <Button as="a" href={path} target={newTab ? "_blank" : undefined} rightIcon={rightIcon}>
+      <Button as="a" href={path} {...props}>
         {children}
       </Button>
     );
@@ -64,8 +73,7 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
     <Button
       as={RouterLink}
       to={path}
-      target={newTab ? "_blank" : undefined}
-      rightIcon={rightIcon}
+      {...props}
     >
       { children }
     </Button>
