@@ -274,10 +274,17 @@ const allHomepages = files(
   },
 );
 
-jake.file("dist/dist/", [], async () => {
-  await mkdirp("dist/");
-  await symlink(path.resolve("website/dist/"), path.resolve("dist/dist/"));
-});
+if(process.env.NODE_ENV === "production") {
+  jake.file("dist/dist/", [], async () => {
+    await mkdirp("dist/");
+    await copy("website/dist", "dist/dist");
+  });
+} else {
+  jake.file("dist/dist/", [], async () => {
+    await mkdirp("dist/");
+    await symlink(path.resolve("website/dist/"), path.resolve("dist/dist/"));
+  });
+}
 
 const INDEX_FILE = process.env.NODE_ENV === "production" ? "website/index.prod.html" : "website/index.html";
 jake.file("dist/index.html", [ INDEX_FILE ], async () => {

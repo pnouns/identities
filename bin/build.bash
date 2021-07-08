@@ -15,6 +15,11 @@ function logStart() {
 
 set -e
 
+if [ "$NODE_ENV" == "production" ]; then
+  logBuild "@idfyi/website"
+  yarn workspace @idfyi/website build
+fi
+
 logStart "@idfyi/dto"
 yarn tsc --build packages/dto/tsconfig.json
 
