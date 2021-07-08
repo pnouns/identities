@@ -24,11 +24,6 @@ yarn tsc --build packages/api-client/tsconfig.json
 logStart "@idfyi/react"
 yarn tsc --build packages/react-client/tsconfig.json
 
-if [ "$NODE_ENV" == "production" ]; then
-  logStart "@idfyi/website"
-  yarn workspace @idfyi/website build
-fi
-
 logStart "prebuild scripts"
 yarn tsc --build prebuild.tsconfig.json
 
@@ -37,6 +32,14 @@ yarn node prebuild.js
 
 logStart "Jakefile"
 yarn tsc --build jake.tsconfig.json
+
+logRun "jake website-deps"
+yarn jake website-deps
+
+if [ "$NODE_ENV" == "production" ]; then
+  logStart "@idfyi/website"
+  yarn workspace @idfyi/website build
+fi
 
 logRun "jake"
 yarn jake

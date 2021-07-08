@@ -311,6 +311,11 @@ jake.file("dist/api.yaml", [ "docs/api.yaml" ], async () => {
   await copy("docs/api.yaml", "dist/api.yaml");
 });
 
+jake.task("website-deps", [
+  NOTO_SANS,
+  ADOC_CSS,
+]);
+
 jake.desc("Default");
 jake.task("default", [
   ...identityIndexFiles.files,
