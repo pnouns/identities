@@ -292,6 +292,11 @@ jake.file("dist/index.html", [ INDEX_FILE ], async () => {
   await copy(INDEX_FILE, "dist/index.html");
 });
 
+jake.file("dist/404.html", [ INDEX_FILE ], async () => {
+  await mkdirp("dist/");
+  await copy(INDEX_FILE, "dist/index.html");
+});
+
 const NOTO_SANS = "website/src/lib/noto-sans.scss";
 jake.file(NOTO_SANS, [], async () => {
   const downloaded = await fetch("https://fonts.googleapis.com/css?family=Noto+Sans");
@@ -327,6 +332,7 @@ jake.task("default", [
   NOTO_SANS,
   ADOC_CSS,
   "dist/index.html",
+  "dist/404.html",
   "dist/dist/",
   "dist/api.yaml",
 ], () => {});
