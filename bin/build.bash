@@ -16,7 +16,7 @@ function logStart() {
 set -e
 
 if [ "$NODE_ENV" == "production" ]; then
-  logBuild "@idfyi/website"
+  logStart "@idfyi/website"
   yarn workspace @idfyi/website build
 fi
 
